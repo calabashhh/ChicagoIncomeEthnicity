@@ -93,7 +93,7 @@ function makeChart(props) {
         },
 
         title:{
-            text: props.NAME  // Use the NAME attribute as chart title 
+            text: props.geoid10  // Use the NAME attribute as chart title 
                               // This is displayed above the chart
                               // You may use other strings, HTML elements or combined
         },
@@ -103,11 +103,11 @@ function makeChart(props) {
             // I use the attribute values as data for making the charts
             // The strings are labels of the charts (shown in legend)
             columns: [  
-                ['White', props.White],
-                ['Black', props.Black],
-                ['Asian', props.Asian],
-                ['Mixed', props.Mixed],
-                ['Other', props.Other]
+                ['white', props.white],
+                ['black', props.black],
+                ['asian', props.asian],
+                ['mixed', props.mixed],
+                ['other', props.other]
             ],
 
             type: 'donut',  // chart type
@@ -161,6 +161,7 @@ function makeChart(props) {
             }
                                   
             var tooltip = document.getElementById("chart");         
+            
             geojson = L.geoJson(data, {
                 style:style,
                 onEachFeature: onEachFeature
