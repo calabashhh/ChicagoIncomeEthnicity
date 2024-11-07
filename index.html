@@ -19,7 +19,7 @@
             <script src="https://d3js.org/d3.v5.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.7.20/c3.min.js"></script>
     
-            <script type="text/javascript" src="ChicagoRace.js"></script>
+            <script type="text/javascript" src="data.js"></script>
     
             <style type="text/css">
             /* Style of the Legend: adjust the values below to change the appearance of the legend pane*/
@@ -103,11 +103,11 @@ function makeChart(props) {
             // I use the attribute values as data for making the charts
             // The strings are labels of the charts (shown in legend)
             columns: [  
-                ['white', props.white],
-                ['black', props.black],
-                ['asian', props.asian],
-                ['mixed', props.mixed],
-                ['other', props.other]
+                ['white', props.PerctWhite],
+                ['black', props.PerctBlack],
+                ['asian', props.PerctAsian],
+                ['mixed', props.PerctMix],
+                ['other', props.PerctOther]
             ],
 
             type: 'donut',  // chart type
